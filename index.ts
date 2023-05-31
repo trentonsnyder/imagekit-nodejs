@@ -1,7 +1,7 @@
 /*
     Helper Modules
 */
-import extend from 'lodash/extend';
+import extend from "lodash/extend";
 import errorMessages from "./libs/constants/errorMessages";
 import {
   BulkDeleteFilesError,
