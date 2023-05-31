@@ -1,4 +1,4 @@
-import _ from "lodash";
+import isObject from "lodash/isObject";
 import errorMessages from "../../libs/constants/errorMessages";
 import respond from "../../utils/respond";
 import request from "../../utils/request";
@@ -28,7 +28,7 @@ export default function (
   defaultOptions: ImageKitOptions,
   callback?: IKCallback<UploadResponse>,
 ): void | Promise<UploadResponse> {
-  if (!_.isObject(uploadOptions)) {
+  if (!isObject(uploadOptions)) {
     respond(true, errorMessages.MISSING_UPLOAD_DATA, callback);
     return;
   }

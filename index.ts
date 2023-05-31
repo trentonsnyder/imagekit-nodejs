@@ -1,7 +1,7 @@
 /*
     Helper Modules
 */
-import _ from "lodash";
+import extend from 'lodash/extend';
 import errorMessages from "./libs/constants/errorMessages";
 import {
   BulkDeleteFilesError,
@@ -86,7 +86,7 @@ class ImageKit {
   };
 
   constructor(opts: ImageKitOptions = {} as ImageKitOptions) {
-    this.options = _.extend(this.options, opts);
+    this.options = extend(this.options, opts);
     if (!this.options.publicKey) {
       throw new Error(errorMessages.MANDATORY_PUBLIC_KEY_MISSING.message);
     }

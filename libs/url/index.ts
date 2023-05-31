@@ -1,7 +1,7 @@
 /*
     Helper Modules
 */
-import _ from "lodash";
+import extend from 'lodash/extend';
 /*
     Interfaces
 */
@@ -12,7 +12,7 @@ import { UrlOptions, ImageKitOptions, FinalUrlOptions } from "../interfaces";
 import builder from "./builder";
 
 export default function (urlOpts: UrlOptions, defaultOptions: ImageKitOptions): string {
-  var opts: FinalUrlOptions = _.extend({}, defaultOptions, urlOpts);
+  var opts: FinalUrlOptions = extend({}, defaultOptions, urlOpts);
 
   return builder.buildURL(opts);
 }

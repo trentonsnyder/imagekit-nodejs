@@ -1,5 +1,5 @@
 import { createHmac } from "crypto";
-import { isNaN } from "lodash";
+import isNaN from "lodash/isNaN";
 import errorMessages from "../libs/constants/errorMessages";
 import type { WebhookEvent } from "../libs/interfaces";
 
